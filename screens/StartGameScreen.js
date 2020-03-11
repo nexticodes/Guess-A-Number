@@ -1,18 +1,19 @@
 import React from 'react';
-import {Text, View, StyleSheet, TextInput, Button, TouchableWithoutFeedback} from 'react-native';
+import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
+import Card from '../components/Card';
 
 const StartGameScreen = props => {
     return (
         <View style={styles.screen}>
             <Text style={styles.title}>Start a New Game!</Text>
-            <View style={styles.inputContainer}>
+            <Card style={styles.inputContainer}>
                 <Text>Select A Number</Text>
-                <TextInput/>
+                <TextInput />
                 <View style={styles.buttonContainer}>
-                    <Button title='RESET' onPress={() => {}}/>
-                    <Button title='CONFIRM' onPress={() => {}}/>
+                    <Button title='RESET' onPress={() => { }} />
+                    <Button title='CONFIRM' onPress={() => { }} />
                 </View>
-            </View>
+            </Card>
         </View>
     );
 };
@@ -37,16 +38,6 @@ const styles = StyleSheet.create({
         width: 300,
         maxWidth: '80%',
         alignItems: 'center',
-        backgroundColor: 'white',
-        // All shadows for iOS.
-        shadowColor: 'black',
-        shadowOffset: {width: 0, height: 2},
-        shadowRadius: 5,
-        shadowOpacity: 0.26,
-        // Elevation for Android
-        elevation: 8,
-        padding: 20,
-        borderRadius: 10,
     },
     buttonContainer: {
         flexDirection: 'row',
